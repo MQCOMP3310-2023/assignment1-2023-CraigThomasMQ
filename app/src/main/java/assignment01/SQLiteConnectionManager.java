@@ -88,7 +88,7 @@ public class SQLiteConnectionManager {
      * @return true if the table structures have been created.
      */
     public boolean createWordleTables(){
-        if(databaseURL != ""){
+        if(!databaseURL.isEmpty()){
             try (   Connection conn = DriverManager.getConnection(databaseURL);
                     Statement stmt = conn.createStatement()
                 ) 
@@ -184,7 +184,7 @@ public class SQLiteConnectionManager {
                 }
                 return false;
 
-            } catch (NullPointerException | SQLException e) {
+            } catch (SQLException e) {
                 System.out.println(e.getStackTrace());
                 return false;
             }
