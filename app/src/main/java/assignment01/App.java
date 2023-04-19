@@ -32,7 +32,9 @@ public class App extends JFrame {
         }
 
         @Override
-        public void keyPressed (KeyEvent e) {}    
+        public void keyPressed (KeyEvent e) {
+            //Event when key is pressed
+        }    
         
         @Override
         public void keyReleased (KeyEvent e) {
@@ -62,11 +64,11 @@ public class App extends JFrame {
             Instant startTime = Instant.now();
             this.repaint();
             Instant endTime = Instant.now();
-            long howLong = Duration.between(startTime, endTime).toMillis();
+            long howLong = Duration.between(startTime, endTime).toMillis(); 
             try {
                 Thread.sleep(20L - howLong);
             } catch (InterruptedException e) {
-                System.out.println("Thread was interrupted, but who cares?");                
+                System.out.println("Thread was interrupted, but who cares?");            
             } catch (IllegalArgumentException e) {
                 System.out.println("Application can't keep up with framerate");
                 e.printStackTrace();
