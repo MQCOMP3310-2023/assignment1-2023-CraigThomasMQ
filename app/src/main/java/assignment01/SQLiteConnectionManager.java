@@ -163,7 +163,7 @@ public class SQLiteConnectionManager {
         
         try (   Connection conn = DriverManager.getConnection(databaseURL);
                     PreparedStatement stmt = conn.prepareStatement(sql)
-                ) 
+        )
             {
                 if (conn != null) {
                     ResultSet resultRows  = stmt.executeQuery();
@@ -184,7 +184,7 @@ public class SQLiteConnectionManager {
                 }
                 return false;
 
-            } catch (SQLException e) {
+            } catch (NullPointerException | SQLException e) {
                 System.out.println(e.getStackTrace());
                 return false;
             }
