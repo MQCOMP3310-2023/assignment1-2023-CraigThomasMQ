@@ -6,7 +6,8 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class Cell extends Rectangle{
+
+public class Cell extends Rectangle {
     private static int size = 70;
     protected int col;
     protected int row;
@@ -17,7 +18,6 @@ public class Cell extends Rectangle{
     protected boolean isActive;
 
     public Cell(){
-        super(0,0,0,0);
         col = -1;
         row = -1;
         displayCharacter = ' ';
@@ -129,5 +129,5 @@ public class Cell extends Rectangle{
     public String toString(){
         return Integer.toString(col) + Integer.toString(row) + ":'" + displayCharacter + "'";
     }
-    
+
 }
