@@ -26,6 +26,16 @@ public class Cell extends Rectangle {
         isEmpty = true;
     }
 
+    @Override
+    public Cell clone(){
+        try{
+           return(Cell)super.clone();
+        } catch(Exception e){
+            throw new AssertionError(); 
+        }
+    }
+
+
     public Cell(int columnIndex, int rowIndex, int inX, int inY){
         super(inX,inY,size,size);
         col = columnIndex;
