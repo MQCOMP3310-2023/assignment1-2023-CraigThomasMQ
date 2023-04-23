@@ -5,4 +5,16 @@
  * @id java/example/empty-block
  */
 
+ from MethodAccess ma, Method method
+ where
+        ma.getMethod() = method and
+        (
+            method.hasName(“println”)
+            and method.getDeclaringType().hasQualifiedName(“java.lang”, “System”)
+        ) or (
+            method.hasName(“printStackTrace”)
+            and method.getDeclaringType().hasQualifiedName(“java.lang”, “System”)
+        )
+ select ma, method
+ 
 
