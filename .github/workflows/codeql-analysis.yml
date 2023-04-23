@@ -28,4 +28,4 @@ jobs:
       uses: github/codeql-action/analyze@v1
       with:
         language: ${{ matrix.language }}
-        query: assignment1-2023-CraigThomasMQ/comp3310-queries/example.ql
+        query: comp3310-queries/example.ql
