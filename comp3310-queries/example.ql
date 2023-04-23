@@ -9,11 +9,11 @@
  where
         ma.getMethod() = method and
         (
-            method.hasName(“println”)
-            and method.getDeclaringType().hasQualifiedName(“java.lang”, “System”)
+            method.hasName("println")
+            and method.getDeclaringType().hasQualifiedName("java.lang", "System")
         ) or (
-            method.hasName(“printStackTrace”)
-            and method.getDeclaringType().hasQualifiedName(“java.lang”, “System”)
+            method.hasName("printStackTrace")
+            and method.getDeclaringType().hasQualifiedName("java.lang", "Throwable")
         )
  select ma, method
  
